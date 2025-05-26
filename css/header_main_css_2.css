@@ -1,0 +1,178 @@
+
+	
+	.success-message {
+  color: #155724;
+  background-color: #d4edda;
+  border: 1px solid #c3e6cb;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-weight: bold;
+  max-width: fit-content;
+}
+
+
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 10px;
+  }
+  .header a {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+}
+
+.header .logo {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+  font-size: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #575757;
+}
+
+.nav-links a.active {
+  background-color: #04AA6D;
+}
+
+
+@media screen and (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .header a {
+    margin: 10px 0;
+  }
+}
+
+/* Mobile phones */
+@media screen and (max-width: 480px) {
+  .header {
+    padding: 10px;
+  }
+  .header a {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+}
+
+
+
+      #data_fetch  table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+      #data_fetch  th, td {
+            border: 1px solid #999;
+            padding: 8px 12px;
+            text-align: left;
+        }
+      #data_fetch  th {
+            background-color: #04AA6D;
+            color: white;
+        }
+       #data_fetch tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+		
+		
+
+/* Base table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid #999;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+/* Allow horizontal scrolling on small screens */
+.table-container {
+  overflow-x: auto;
+}
+
+/* **************************** For very small screens: stack table rows ************************** */
+@media only screen and (max-width: 600px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none; /* Hide table headers */
+  }
+
+  tr {
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    padding: 10px;
+  }
+
+  td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    white-space: normal;
+    text-align: left;
+  }
+
+  /* Add labels before each cell using data-label attribute */
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-weight: bold;
+    white-space: nowrap;
+  }
+  
+  .report-nav {
+	float:left;
+	display:block;
+	margin-top:10%;
+	font-size:10px;
+}
+}
+
+/* *****************************************************************  */	
+
+/* Style the buttons that are used to open and close the accordion panel */
+.accordion {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #ccc;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
+}
