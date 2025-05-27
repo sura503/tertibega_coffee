@@ -1,18 +1,5 @@
-<!-- <?php
-// Connect to MySQL
-/*$conn = new mysqli("localhost", "root", "", "tertibega_coffee");
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-
-*/
-?>
-  -->
-
-  
 <?php
-$host = getenv('DB_HOST') ?: 'localhost';
+$host = getenv('DB_HOST') ?: 'db'; // <- 'db' is the name of the MySQL service in docker-compose
 $user = getenv('DB_USER') ?: 'root';
 $pass = '';  // Blank password
 $db   = getenv('DB_NAME') ?: 'tertibega_coffee';
