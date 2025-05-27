@@ -1,8 +1,9 @@
 services:
   - type: web
-    name: tertibega-coffee
+    name: tertibega-web
     env: docker
+    dockerfilePath: ./web/Dockerfile   # 👈 this must match the actual file path
+    dockerContext: .                   # 👈 context is project root (where docker-compose.yml lives)
     plan: free
-    dockerfilePath: ./Dockerfile
-    branch: main
-    autoDeploy: true
+    buildCommand: docker-compose build
+    startCommand: docker-compose up
