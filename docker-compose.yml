@@ -3,8 +3,8 @@ version: '3.8'
 services:
   web:
     build:
-      context: ./web
-      dockerfile: Dockerfile
+      context: .            # root directory as build context (so Docker can access Dockerfile and code)
+      dockerfile: Dockerfile  # Dockerfile in root directory
     ports:
       - "80:80"
     depends_on:
@@ -12,13 +12,13 @@ services:
     environment:
       DB_HOST: db
       DB_USER: root
-      DB_PASS: ""               # <-- Empty string since root has no password
+      DB_PASS: ""            # empty password
       DB_NAME: tertibega_coffee
 
   db:
     image: mysql:8.0
     environment:
-      MYSQL_ALLOW_EMPTY_PASSWORD: yes
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
       MYSQL_DATABASE: tertibega_coffee
     volumes:
       - dbdata:/var/lib/mysql

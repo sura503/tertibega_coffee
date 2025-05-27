@@ -2,7 +2,7 @@ services:
   - type: web
     name: tertibega-web
     env: docker
-    dockerfilePath: ./web/Dockerfile   # 👈 this must match the actual file path
+    dockerfilePath: ./Dockerfile   # 👈 this must match the actual file path
     dockerContext: .                   # 👈 context is project root (where docker-compose.yml lives)
     plan: free
     buildCommand: docker-compose build
